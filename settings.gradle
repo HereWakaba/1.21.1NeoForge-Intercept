@@ -1,0 +1,45 @@
+pluginManagement {
+    repositories {
+        maven { url = 'https://maven.aliyun.com/repository/gradle-plugin' }
+        maven { url = 'https://maven.aliyun.com/repository/public' }
+        maven { url = 'https://maven.aliyun.com/repository/central' }
+        maven { url = 'https://mirrors.cloud.tencent.com/nexus/repository/maven-public/' }
+        mavenLocal()
+        gradlePluginPortal()
+        maven { url = 'https://maven.neoforged.net/releases' }
+    }
+}
+
+plugins {
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '0.8.0'
+}
+
+def domesticMirrors = [
+        'https://maven.aliyun.com/repository/public',
+        'https://maven.aliyun.com/repository/central',
+        'https://mirrors.cloud.tencent.com/nexus/repository/maven-public/',
+        'https://bmclapi2.bangbang93.com/maven/',
+]
+
+def mirrorRepos = [:]
+
+gradle.beforeProject { project ->
+    def added = []
+    domesticMirrors.each { mirrorUrl ->
+        added << project.repositories.maven { url = mirrorUrl }
+    }
+    mirrorRepos[project.path] = added
+}
+
+gradle.projectsEvaluated { g ->
+    g.rootProject.allprojects { p ->
+        def repos = mirrorRepos[p.path]
+        if (repos) {
+            for (int i = repos.size() - 1; i >= 0; i--) {
+                def repo = repos[i]
+                p.repositories.remove(repo)
+                p.repositories.addFirst(repo)
+            }
+        }
+    }
+}
