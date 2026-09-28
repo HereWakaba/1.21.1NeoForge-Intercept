@@ -1,0 +1,35 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.ryjs.intercept.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "TimeStop.TickRateManagerMixin"
+  ],
+  "client": [
+    "CosmicRender.GuiGraphicsMixin",
+    "CosmicRender.GuiMixin",
+    "CosmicRender.ItemRendererMixin",
+    "CosmicRender.LevelRendererMixin",
+    "CosmicRender.TrueTypeGlyphProviderDefinitionMixin",
+    "TimeStop.GameRendererRenderPassMixin",
+    "TimeStop.GameRendererFovFreezeMixin",
+    "TimeStop.UtilMillisFreezeMixin",
+    "TimeStop.LevelTimeFreezeMixin",
+    "TimeStop.ParticleFreezeMixin",
+    "TimeStop.ParticleEngineFreezeMixin",
+    "TimeStop.LightTextureFreezeMixin",
+    "TimeStop.SoundManagerFreezeMixin",
+    "TimeStop.MusicManagerFreezeMixin",
+    "TimeStop.TextureManagerFreezeMixin",
+    "TimeStop.PostChainFreezeMixin",
+    "TimeStop.LevelRendererFreezeMixin",
+    "TimeStop.ItemStackFreezeMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "intercept:item/endoftaichi"
+  },
+  "loader": "intercept:cosmic",
+  "cosmic": {
+    "mask": "intercept:item/endoftaichi_mask"
+  }
+}
