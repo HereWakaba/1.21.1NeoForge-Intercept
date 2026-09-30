@@ -8,7 +8,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import net.minecraft.Util;
 
-
 @Mixin(Util.class)
 public class UtilMillisFreezeMixin {
 

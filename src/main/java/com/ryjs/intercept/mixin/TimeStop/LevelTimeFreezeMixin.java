@@ -8,7 +8,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import net.minecraft.world.level.Level;
 
-
 @Mixin(Level.class)
 public class LevelTimeFreezeMixin {
 

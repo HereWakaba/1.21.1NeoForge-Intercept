@@ -9,7 +9,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import net.minecraft.client.renderer.LevelRenderer;
 
-
 @Mixin(LevelRenderer.class)
 public class LevelRendererFreezeMixin {
 

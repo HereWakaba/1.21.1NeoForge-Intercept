@@ -8,7 +8,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import net.minecraft.client.renderer.texture.TextureManager;
 
-
 @Mixin(TextureManager.class)
 public class TextureManagerFreezeMixin {
 

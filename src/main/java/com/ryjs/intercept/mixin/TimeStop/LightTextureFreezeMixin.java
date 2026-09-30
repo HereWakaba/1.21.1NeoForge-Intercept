@@ -8,7 +8,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import net.minecraft.client.renderer.LightTexture;
 
-
 @Mixin(LightTexture.class)
 public class LightTextureFreezeMixin {
 

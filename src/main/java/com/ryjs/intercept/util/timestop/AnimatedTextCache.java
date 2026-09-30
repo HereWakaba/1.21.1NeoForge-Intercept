@@ -9,9 +9,7 @@ import java.util.IdentityHashMap;
 import java.util.List;
 import java.util.Map;
 
-
 public final class AnimatedTextCache {
-
 
     private static final Map<ItemStack, Component> NAMES =
             Collections.synchronizedMap(new IdentityHashMap<>());
@@ -21,11 +19,9 @@ public final class AnimatedTextCache {
     private AnimatedTextCache() {
     }
 
-
     private static boolean exempt(ItemStack stack) {
         return stack != null && stack.getItem() instanceof TimestopTextExempt;
     }
-
 
     public static Component peekName(ItemStack stack) {
         if (exempt(stack)) {
@@ -34,13 +30,11 @@ public final class AnimatedTextCache {
         return stack == null ? null : NAMES.get(stack);
     }
 
-
     public static void storeName(ItemStack stack, Component name) {
         if (!exempt(stack) && stack != null && name != null) {
             NAMES.putIfAbsent(stack, name);
         }
     }
-
 
     public static List<Component> peekTooltip(ItemStack stack) {
         if (exempt(stack)) {
@@ -55,7 +49,6 @@ public final class AnimatedTextCache {
             TOOLTIPS.putIfAbsent(stack, new ArrayList<>(lines));
         }
     }
-
 
     public static void clear() {
         NAMES.clear();

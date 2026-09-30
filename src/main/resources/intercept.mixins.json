@@ -24,7 +24,9 @@
     "TimeStop.TextureManagerFreezeMixin",
     "TimeStop.PostChainFreezeMixin",
     "TimeStop.LevelRendererFreezeMixin",
-    "TimeStop.ItemStackFreezeMixin"
+    "TimeStop.ItemStackFreezeMixin",
+    "TimeStop.FontSetObfuscationFreezeMixin",
+    "TimeStop.MinecraftFrameCounterMixin"
   ],
   "injectors": {
     "defaultRequire": 1

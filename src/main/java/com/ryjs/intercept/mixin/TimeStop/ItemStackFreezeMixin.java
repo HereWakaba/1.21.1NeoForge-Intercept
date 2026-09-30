@@ -12,7 +12,6 @@ import net.minecraft.world.item.ItemStack;
 
 import java.util.List;
 
-
 @Mixin(ItemStack.class)
 public class ItemStackFreezeMixin {
 

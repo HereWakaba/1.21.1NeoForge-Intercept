@@ -8,7 +8,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import net.minecraft.client.sounds.SoundManager;
 
-
 @Mixin(SoundManager.class)
 public class SoundManagerFreezeMixin {
 

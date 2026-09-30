@@ -8,7 +8,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import net.minecraft.client.particle.ParticleEngine;
 
-
 @Mixin(ParticleEngine.class)
 public class ParticleEngineFreezeMixin {
 

@@ -7,7 +7,6 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
 import net.minecraft.client.renderer.PostChain;
 
-
 @Mixin(PostChain.class)
 public class PostChainFreezeMixin {
 

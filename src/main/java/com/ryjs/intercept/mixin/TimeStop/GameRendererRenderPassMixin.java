@@ -8,7 +8,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import net.minecraft.client.renderer.GameRenderer;
 
-
 @Mixin(GameRenderer.class)
 public class GameRendererRenderPassMixin {
 

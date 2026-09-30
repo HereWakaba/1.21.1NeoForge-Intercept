@@ -8,10 +8,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import net.minecraft.world.TickRateManager;
 
-
 @Mixin(TickRateManager.class)
 public class TickRateManagerMixin {
-
 
     @Inject(method = "runsNormally", at = @At("HEAD"), cancellable = true)
     private void intercept$timeStop(CallbackInfoReturnable<Boolean> cir) {
